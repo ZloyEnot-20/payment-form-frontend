@@ -41,11 +41,11 @@ const PaymentForm = () => {
         message.error(STATUS_MESSAGES.error);
       }
     }
-  }, [isPaid, requestId]);
+  }, [isPaid, requestId, error]);
 
   return (
     <div className="payment__form">
-      <div class="payment__header">
+      <div className="payment__header">
         <ThunderboltFilled className="payment__icon" style={ICON_STYLE} />
         <h1>Easy Pay</h1>
       </div>

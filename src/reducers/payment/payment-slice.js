@@ -34,7 +34,7 @@ export const handlePayment = (data) => async (dispatch) => {
     dispatch(payment.actions.sendPayment());
 
     await axios
-      .post("http://localhost:5000/api/pay", data)
+      .post("http://localhost:5555/api/pay", data)
       .then(({ data: id }) => dispatch(payment.actions.paymentSuccess(id)));
   } catch (e) {
     dispatch(payment.actions.paymentError(e.message));
